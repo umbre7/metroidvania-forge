@@ -1,1 +1,1 @@
-# metroidvania-forge
+# Metroidvania Forge
