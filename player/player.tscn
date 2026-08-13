@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dtbosehmi0bt2" path="res://player/scripts/player.gd" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://55xw6dqq6fdy" path="res://player/states/idle.gd" id="2_rkbax"]
 [ext_resource type="Script" uid="uid://8wf8t8p8nl4d" path="res://player/states/run.gd" id="3_g1dw6"]
+[ext_resource type="Script" uid="uid://cr8vc4shmfls0" path="res://player/states/jump.gd" id="4_yw30f"]
+[ext_resource type="Script" uid="uid://6bpkfbfubiw7" path="res://player/states/fall.gd" id="5_qjkh3"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rsrsk"]
 size = Vector2(18, 48)
@@ -13,6 +15,24 @@ size = Vector2(16, 46)
 [node name="Player" type="CharacterBody2D" unique_id=1777680232]
 script = ExtResource("1_oul6g")
 
+[node name="States" type="Node" parent="." unique_id=1357115313]
+
+[node name="Idle" type="Node" parent="States" unique_id=819656164]
+unique_name_in_owner = true
+script = ExtResource("2_rkbax")
+
+[node name="Run" type="Node" parent="States" unique_id=1130359212]
+unique_name_in_owner = true
+script = ExtResource("3_g1dw6")
+
+[node name="Jump" type="Node" parent="States" unique_id=1380377800]
+unique_name_in_owner = true
+script = ExtResource("4_yw30f")
+
+[node name="Fall" type="Node" parent="States" unique_id=1925911868]
+unique_name_in_owner = true
+script = ExtResource("5_qjkh3")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=389323513]
 position = Vector2(0, -24)
 texture = SubResource("PlaceholderTexture2D_rsrsk")
@@ -22,10 +42,11 @@ position = Vector2(0, -23)
 shape = SubResource("RectangleShape2D_rsrsk")
 debug_color = Color(0, 0.6, 0.69803923, 0.24313726)
 
-[node name="States" type="Node" parent="." unique_id=1357115313]
-
-[node name="Idle" type="Node" parent="States" unique_id=819656164]
-script = ExtResource("2_rkbax")
-
-[node name="Run" type="Node" parent="States" unique_id=1130359212]
-script = ExtResource("3_g1dw6")
+[node name="Label" type="Label" parent="." unique_id=25944519]
+offset_left = -32.0
+offset_top = -72.0
+offset_right = 32.0
+offset_bottom = -49.0
+theme_override_font_sizes/font_size = 10
+text = "label"
+horizontal_alignment = 1
