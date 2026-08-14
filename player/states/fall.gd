@@ -27,6 +27,7 @@ func enter() -> void:
 # What happens when we exit this state ?
 func exit() -> void:
 	player.gravity_multiplier = 1.0
+	buffer_timer = 0
 	pass
 
 

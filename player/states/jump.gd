@@ -13,7 +13,14 @@ func enter() -> void:
 	player.animation_player.play("jump")
 	player.animation_player.pause()
 	#player.add_debug_indicator(Color.DARK_GREEN)
-	player.velocity.y = -jump_velocity  
+	player.velocity.y = -jump_velocity
+	
+	# Check if this is a buffer jump
+	# If it is, handle jump button release condition retroactively
+	if player.previous_state == fall and not Input.is_action_pressed("jump"):
+		await get_tree().physics_frame
+		player.velocity.y *= 0.5
+		player.change_state(fall)
 	pass
 
 
