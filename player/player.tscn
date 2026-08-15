@@ -110,6 +110,7 @@ _data = {
 size = Vector2(16, 3)
 
 [node name="Player" type="CharacterBody2D" unique_id=1777680232]
+z_index = 1
 collision_layer = 0
 collision_mask = 3
 floor_constant_speed = true
