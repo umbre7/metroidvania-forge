@@ -175,3 +175,6 @@ shape = SubResource("RectangleShape2D_5gxoi")
 target_position = Vector2(0, 6)
 max_results = 12
 collision_mask = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=677326414]
+position = Vector2(0, -37)
