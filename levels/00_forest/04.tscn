@@ -2,15 +2,16 @@
 
 [ext_resource type="Script" uid="uid://cced2sotnp1k3" path="res://general/scripts/level_bounds.gd" id="1_pbotc"]
 [ext_resource type="TileSet" uid="uid://jl8xm6vayrxi" path="res://levels/tilesets/forgotten_forest.tres" id="2_c3nrs"]
+[ext_resource type="PackedScene" uid="uid://coi0vcyvfj31x" path="res://general/level_transition/level_transition.tscn" id="3_c3nrs"]
 
 [node name="04" type="Node2D" unique_id=1988510917]
 
 [node name="LevelBounds" type="Node2D" parent="." unique_id=92714978]
 z_index = 256
-position = Vector2(-40, -40)
+position = Vector2(-40, -63)
 script = ExtResource("1_pbotc")
 width = 960
-height = 302
+height = 334
 metadata/_custom_type_script = "uid://cced2sotnp1k3"
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="." unique_id=613272037]
@@ -24,4 +25,9 @@ tile_set = ExtResource("2_c3nrs")
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=668183175]
 tile_map_data = PackedByteArray("AAAJAAQAAAAAAAgAAAAJAAUAAAAAAAkAAAAJAAYAAAAAAAoAAAAJAAcAAAAAAAoAAAAKAAQAAAABAAgAAAAKAAUAAAABAAkAAAAKAAYAAAABAAoAAAAKAAcAAAABAAoAAAALAAQAAAACAAgAAAALAAUAAAACAAkAAAALAAYAAAACAAoAAAALAAcAAAACAAoAAAAMAAQAAAADAAgAAAAMAAUAAAADAAkAAAAMAAYAAAAEAAoAAAAMAAcAAAAEAAoAAAANAAQAAAAFAAgAAAANAAUAAAAFAAkAAAANAAYAAAAFAAkAAAANAAcAAAAFAAoAAAAMAAgAAAAEAAsAAAANAAgAAAAFAAsAAAAJAAgAAAAAAAsAAAAKAAgAAAABAAsAAAALAAgAAAACAAsAAAAQAAMAAAAAAAgAAAAQAAQAAAAAAAkAAAAQAAUAAAAAAAoAAAAQAAYAAAAAAAoAAAARAAMAAAAEAAgAAAARAAQAAAABAAkAAAARAAUAAAABAAoAAAARAAYAAAABAAoAAAASAAMAAAAEAAgAAAASAAQAAAAEAAkAAAASAAUAAAAEAAoAAAASAAYAAAAEAAoAAAARAAcAAAABAAsAAAASAAcAAAAEAAoAAAARAAgAAAABAAsAAAASAAgAAAAEAAsAAAAQAAcAAAAAAAsAAAAQAAgAAAAAAAsAAAATAAMAAAAFAAgAAAATAAQAAAAFAAkAAAATAAUAAAAFAAoAAAATAAYAAAAFAAoAAAATAAcAAAAFAAoAAAATAAgAAAAFAAsAAAAQAAkAAAAAAAsAAAARAAkAAAABAAsAAAASAAkAAAAEAAsAAAATAAkAAAAFAAsAAAA=")
 tile_set = ExtResource("2_c3nrs")
-collision_enabled = false
+
+[node name="LevelTransition" parent="." unique_id=555964536 instance=ExtResource("3_c3nrs")]
+position = Vector2(96, -64)
+location = 2
+target_level = "uid://cc0jawhlxy1go"
+target_area_name = "LevelTransition2"
