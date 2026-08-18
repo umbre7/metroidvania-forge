@@ -109,6 +109,17 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gxoi"]
 size = Vector2(16, 3)
 
+[sub_resource type="Gradient" id="Gradient_boad6"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rsrsk"]
+gradient = SubResource("Gradient_boad6")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
 [node name="Player" type="CharacterBody2D" unique_id=1777680232 groups=["Player"]]
 z_index = 1
 collision_layer = 16
@@ -178,3 +189,9 @@ collision_mask = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=677326414]
 position = Vector2(0, -37)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1338243313]
+position = Vector2(0, -29)
+color = Color(1, 0.8, 0.56078434, 1)
+energy = 0.3
+texture = SubResource("GradientTexture2D_rsrsk")
