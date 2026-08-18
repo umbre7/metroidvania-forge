@@ -4,6 +4,7 @@
 [ext_resource type="TileSet" uid="uid://jl8xm6vayrxi" path="res://levels/tilesets/forgotten_forest.tres" id="2_c3nrs"]
 [ext_resource type="PackedScene" uid="uid://coi0vcyvfj31x" path="res://general/level_transition/level_transition.tscn" id="3_c3nrs"]
 [ext_resource type="PackedScene" uid="uid://b3c1xq1cvkdkd" path="res://levels/props/torch.tscn" id="4_hejkf"]
+[ext_resource type="PackedScene" uid="uid://cfa3xni5hj64u" path="res://player/player.tscn" id="5_2hhtl"]
 
 [node name="04" type="Node2D" unique_id=1988510917]
 
@@ -48,3 +49,10 @@ position = Vector2(576, 101)
 
 [node name="Torch4" parent="props" unique_id=1715718556 instance=ExtResource("4_hejkf")]
 position = Vector2(363, 133)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1831794168]
+color = Color(0.078431375, 0.09411765, 0.078431375, 1)
+blend_mode = 2
+
+[node name="Player" parent="." unique_id=1777680232 instance=ExtResource("5_2hhtl")]
+position = Vector2(128, 195)
