@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://coi0vcyvfj31x" path="res://general/level_transition/level_transition.tscn" id="3_epyyu"]
 [ext_resource type="PackedScene" uid="uid://28f38bmicoga" path="res://levels/props/plant.tscn" id="4_s2tn3"]
 [ext_resource type="PackedScene" uid="uid://b3c1xq1cvkdkd" path="res://levels/props/torch.tscn" id="5_o5ap7"]
-[ext_resource type="PackedScene" uid="uid://cfa3xni5hj64u" path="res://player/player.tscn" id="6_tfgdr"]
 [ext_resource type="Texture2D" uid="uid://clnfwb1s4xlt4" path="res://levels/tilesets/sprites/light_stream.jpg" id="7_152a0"]
+[ext_resource type="PackedScene" uid="uid://cpu56uihpy3rm" path="res://general/player_spawn/player_spawn.tscn" id="8_lj4o7"]
 [ext_resource type="Material" uid="uid://l4p5rfj3wr28" path="res://materials_and_shaders/fog_fade_material.tres" id="8_yy75x"]
 
 [sub_resource type="Gradient" id="Gradient_vhcel"]
@@ -184,9 +184,6 @@ position = Vector2(368, 134)
 [node name="Torch2" parent="props" unique_id=933580628 instance=ExtResource("5_o5ap7")]
 position = Vector2(552, 199)
 
-[node name="Player" parent="." unique_id=1777680232 instance=ExtResource("6_tfgdr")]
-position = Vector2(35, 195)
-
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1146106149]
 color = Color(0.2901961, 0.41960785, 0.36078432, 1)
 energy = 0.6
@@ -263,3 +260,6 @@ modulate = Color(0.4117647, 0.52156866, 0.3647059, 1)
 material = ExtResource("8_yy75x")
 position = Vector2(498, 173)
 texture = SubResource("NoiseTexture2D_ns032")
+
+[node name="PlayerSpawn" parent="." unique_id=1720556502 instance=ExtResource("8_lj4o7")]
+position = Vector2(37, 193)
