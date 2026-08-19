@@ -1,12 +1,12 @@
 [gd_scene format=4 uid="uid://cilmdg5tpbdkk"]
 
 [ext_resource type="TileSet" uid="uid://jl8xm6vayrxi" path="res://levels/tilesets/forgotten_forest.tres" id="1_fvrtv"]
-[ext_resource type="PackedScene" uid="uid://cfa3xni5hj64u" path="res://player/player.tscn" id="2_pu3y4"]
 [ext_resource type="Script" uid="uid://cced2sotnp1k3" path="res://general/scripts/level_bounds.gd" id="3_1pu88"]
 [ext_resource type="PackedScene" uid="uid://coi0vcyvfj31x" path="res://general/level_transition/level_transition.tscn" id="3_vhcel"]
 [ext_resource type="PackedScene" uid="uid://28f38bmicoga" path="res://levels/props/plant.tscn" id="5_qmxb0"]
 [ext_resource type="Texture2D" uid="uid://j0wibshqx3kx" path="res://levels/tilesets/sprites/forgotten_forest_example_tileset.png" id="6_72pnk"]
 [ext_resource type="Texture2D" uid="uid://clnfwb1s4xlt4" path="res://levels/tilesets/sprites/light_stream.jpg" id="6_chwhs"]
+[ext_resource type="PackedScene" uid="uid://cpu56uihpy3rm" path="res://general/player_spawn/player_spawn.tscn" id="8_8sv46"]
 [ext_resource type="Material" uid="uid://l4p5rfj3wr28" path="res://materials_and_shaders/fog_fade_material.tres" id="8_vdj2u"]
 
 [sub_resource type="Gradient" id="Gradient_vhcel"]
@@ -1317,9 +1317,6 @@ size = 7
 location = 1
 target_level = "uid://cc0jawhlxy1go"
 
-[node name="Player" parent="." unique_id=1777680232 instance=ExtResource("2_pu3y4")]
-position = Vector2(1270, 157)
-
 [node name="BackgroundParallaxLayers" type="Node2D" parent="." unique_id=1541020608]
 
 [node name="Parallax2D4" type="Parallax2D" parent="BackgroundParallaxLayers" unique_id=1699089721]
@@ -1581,3 +1578,6 @@ lifetime = 5.0
 randomness = 0.85
 visibility_rect = Rect2(-250, -250, 500, 500)
 process_material = SubResource("ParticleProcessMaterial_rsrsk")
+
+[node name="PlayerSpawn" parent="." unique_id=1720556502 instance=ExtResource("8_8sv46")]
+position = Vector2(94, 227)
