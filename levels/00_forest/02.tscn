@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b3c1xq1cvkdkd" path="res://levels/props/torch.tscn" id="5_o5ap7"]
 [ext_resource type="PackedScene" uid="uid://cfa3xni5hj64u" path="res://player/player.tscn" id="6_tfgdr"]
 [ext_resource type="Texture2D" uid="uid://clnfwb1s4xlt4" path="res://levels/tilesets/sprites/light_stream.jpg" id="7_152a0"]
+[ext_resource type="Material" uid="uid://l4p5rfj3wr28" path="res://materials_and_shaders/fog_fade_material.tres" id="8_yy75x"]
 
 [sub_resource type="Gradient" id="Gradient_vhcel"]
 colors = PackedColorArray(0.5529412, 0.7647059, 0.7294118, 1, 0.28235295, 0.45490196, 0.5254902, 0)
@@ -20,6 +21,31 @@ fill_to = Vector2(0, 0)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yy75x"]
 blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_gyct4"]
+offsets = PackedFloat32Array(0.08677686, 0.822314)
+colors = PackedColorArray(0.32941177, 0.43529412, 0.47843137, 0, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_yy75x"]
+seed = 1
+frequency = 0.0023
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lj4o7"]
+noise = SubResource("FastNoiseLite_yy75x")
+color_ramp = SubResource("Gradient_gyct4")
+seamless = true
+seamless_blend_skirt = 0.3
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5gxoi"]
+seed = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ns032"]
+height = 256
+noise = SubResource("FastNoiseLite_5gxoi")
+color_ramp = SubResource("Gradient_gyct4")
+seamless = true
+normalize = false
+seamless_blend_skirt = 0.3
 
 [node name="02" type="Node2D" unique_id=1725438127]
 
@@ -116,8 +142,8 @@ tile_map_data = PackedByteArray("AAABAAYAAAAMAAIAAAABAAcAAAAMAAMAAAABAAgAAAAMAAQ
 tile_set = ExtResource("2_epyyu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1476494518]
-position = Vector2(4216.9746, 220)
-scale = Vector2(33.468037, 1)
+position = Vector2(717.03296, 220)
+scale = Vector2(6.124743, 1)
 texture = SubResource("GradientTexture2D_epyyu")
 
 [node name="LevelTransition" parent="." unique_id=555964536 instance=ExtResource("3_epyyu")]
@@ -211,3 +237,29 @@ rotation = 0.76743317
 scale = Vector2(0.80871874, 1)
 texture = ExtResource("7_152a0")
 offset = Vector2(0, 256)
+
+[node name="FogParallax2D" type="Parallax2D" parent="." unique_id=1790532892]
+z_index = 4
+scroll_scale = Vector2(1.3, 1)
+repeat_size = Vector2(512, 0)
+autoscroll = Vector2(-15, 0)
+repeat_times = 2
+
+[node name="FogSprite" type="Sprite2D" parent="FogParallax2D" unique_id=1715654685]
+modulate = Color(0.23137255, 0.43137255, 0.3529412, 0.6039216)
+material = ExtResource("8_yy75x")
+position = Vector2(473, 58)
+texture = SubResource("NoiseTexture2D_lj4o7")
+
+[node name="FogParallax2D2" type="Parallax2D" parent="." unique_id=141674006]
+z_index = 4
+scroll_scale = Vector2(1.35, 1)
+repeat_size = Vector2(512, 0)
+autoscroll = Vector2(-10, 0)
+repeat_times = 2
+
+[node name="FogSprite" type="Sprite2D" parent="FogParallax2D2" unique_id=733369633]
+modulate = Color(0.4117647, 0.52156866, 0.3647059, 1)
+material = ExtResource("8_yy75x")
+position = Vector2(498, 173)
+texture = SubResource("NoiseTexture2D_ns032")
