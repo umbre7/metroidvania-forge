@@ -34,6 +34,11 @@ location = 2
 target_level = "uid://cc0jawhlxy1go"
 target_area_name = "LevelTransition2"
 
+[node name="LevelTransition2" parent="." unique_id=839752991 instance=ExtResource("3_c3nrs")]
+position = Vector2(920, 192)
+location = 1
+target_level = "uid://cunq18k2pm08h"
+
 [node name="props" type="Node2D" parent="." unique_id=384576232]
 
 [node name="Torch" parent="props" unique_id=1652981424 instance=ExtResource("4_hejkf")]
