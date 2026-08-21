@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0hthrw6rrgup"
-path="res://.godot/imported/metroidvania_forge_icon_tempo.svg-f73f9485c200336c98e98b501ef9611f.ctex"
+uid="uid://bywyvwutbe4si"
+path="res://.godot/imported/metroidvania_logo_v2.png-87e3555db49ac24e1984612823b284c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://metroidvania_forge_icon_tempo.svg"
-dest_files=["res://.godot/imported/metroidvania_forge_icon_tempo.svg-f73f9485c200336c98e98b501ef9611f.ctex"]
+source_file="res://metroidvania_logo_v2.png"
+dest_files=["res://.godot/imported/metroidvania_logo_v2.png-87e3555db49ac24e1984612823b284c2.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
