@@ -37,6 +37,11 @@ position = Vector2(0, 224)
 target_level = "uid://gvtn1bdnbeiu"
 target_area_name = "LevelTransition2"
 
+[node name="LevelTransition2" parent="." unique_id=391821463 instance=ExtResource("4_xnbxw")]
+position = Vector2(575, 223)
+location = 1
+target_level = "uid://c7umtu0v6m50e"
+
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=672103745]
 color = Color(0.078431375, 0.09411765, 0.078431375, 1)
 energy = 0.5
