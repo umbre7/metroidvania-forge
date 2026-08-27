@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://b3c1xq1cvkdkd" path="res://levels/props/torch.tscn" id="3_e8knj"]
 [ext_resource type="PackedScene" uid="uid://cpu56uihpy3rm" path="res://general/player_spawn/player_spawn.tscn" id="4_e8knj"]
 [ext_resource type="PackedScene" uid="uid://coi0vcyvfj31x" path="res://general/level_transition/level_transition.tscn" id="5_u6uvq"]
+[ext_resource type="PackedScene" uid="uid://bgxd8vlj0xdfp" path="res://general/door_and_switch/door.tscn" id="6_u6uvq"]
+[ext_resource type="PackedScene" uid="uid://rd6jq2thih50" path="res://general/door_and_switch/switch.tscn" id="7_ocngb"]
 
 [node name="05" type="Node2D" unique_id=151369210]
 
@@ -56,7 +58,12 @@ target_level = "uid://cunq18k2pm08h"
 target_area_name = "LevelTransition2"
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=404525927]
-visible = false
 color = Color(0.078431375, 0.09411765, 0.078431375, 1)
 energy = 0.6
 blend_mode = 2
+
+[node name="Door" parent="." unique_id=2101647358 instance=ExtResource("6_u6uvq")]
+position = Vector2(606, 128)
+
+[node name="Switch" parent="Door" unique_id=470205180 instance=ExtResource("7_ocngb")]
+position = Vector2(-124, 3)
