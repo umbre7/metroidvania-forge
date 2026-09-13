@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0hthrw6rrgup"
-path="res://.godot/imported/metroidvania_forge_icon_tempo.svg-f73f9485c200336c98e98b501ef9611f.ctex"
+uid="uid://bhf5uxne0il24"
+path="res://.godot/imported/switch.svg-1a847ce9589c90edfc0dc6c2b199e142.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://metroidvania_forge_icon_tempo.svg"
-dest_files=["res://.godot/imported/metroidvania_forge_icon_tempo.svg-f73f9485c200336c98e98b501ef9611f.ctex"]
+source_file="res://general/icons/switch.svg"
+dest_files=["res://.godot/imported/switch.svg-1a847ce9589c90edfc0dc6c2b199e142.ctex"]
 
 [params]
 

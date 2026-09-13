@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://clnfwb1s4xlt4" path="res://levels/tilesets/sprites/light_stream.jpg" id="7_152a0"]
 [ext_resource type="PackedScene" uid="uid://cpu56uihpy3rm" path="res://general/player_spawn/player_spawn.tscn" id="8_lj4o7"]
 [ext_resource type="Material" uid="uid://l4p5rfj3wr28" path="res://materials_and_shaders/fog_fade_material.tres" id="8_yy75x"]
+[ext_resource type="Script" uid="uid://11wam0e7xdau" path="res://music/music_auto_trigger.gd" id="9_ns032"]
+[ext_resource type="AudioStream" uid="uid://doarsgnjjr2xr" path="res://music/forest_01.ogg" id="10_7fi1v"]
 
 [sub_resource type="Gradient" id="Gradient_vhcel"]
 colors = PackedColorArray(0.5529412, 0.7647059, 0.7294118, 1, 0.28235295, 0.45490196, 0.5254902, 0)
@@ -263,3 +265,8 @@ texture = SubResource("NoiseTexture2D_ns032")
 
 [node name="PlayerSpawn" parent="." unique_id=1720556502 instance=ExtResource("8_lj4o7")]
 position = Vector2(37, 193)
+
+[node name="MusicAutoTrigger" type="Node" parent="." unique_id=321957409]
+script = ExtResource("9_ns032")
+track = ExtResource("10_7fi1v")
+metadata/_custom_type_script = "uid://11wam0e7xdau"
