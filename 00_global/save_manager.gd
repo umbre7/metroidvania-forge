@@ -20,17 +20,19 @@ func _ready() -> void:
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_P:
-			save_game()
-		elif event.keycode == KEY_L:
-			load_game(current_slot)
-		elif event.keycode == KEY_V:
-			current_slot = 0
-		elif event.keycode == KEY_B:
-			current_slot = 1
-		elif event.keycode == KEY_N:
-			current_slot = 2
+	# DEBUG
+	if OS.is_debug_build():
+		if event is InputEventKey and event.pressed:
+			if event.keycode == KEY_P:
+				save_game()
+			elif event.keycode == KEY_L:
+				load_game(current_slot)
+			elif event.keycode == KEY_V:
+				current_slot = 0
+			elif event.keycode == KEY_B:
+				current_slot = 1
+			elif event.keycode == KEY_N:
+				current_slot = 2
 	pass
 
 
